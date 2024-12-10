@@ -6,13 +6,30 @@ const addButton = document.querySelector(".btn"); // add button
 const deleteButton = document.getElementById("deleteButton"); //delete button
 const todoCount = document.getElementById("todoCount"); //counter section
 
-//listener for the add button
+//starting function
 document.addEventListener("DOMContentLoaded", function() {
-    addButton.addEventListener("click", addItem);
-})
+    addButton.addEventListener("click", addItem());//add buton
+   
+    //if enter is pressed in the input part, add item 
+    listInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault() //don't refresh the page, 
+            addItem();
+        }
+    })
+    // when delete is pressed, delete all items
+    deleteButton.addEventListener("click", deleteAllItems)
+    
+    displayItems() // to show all items on the list
+  
+});
 
 
 //rem
 function addItem () {
+
+}
+
+function deleteAllItems () {
 
 }
