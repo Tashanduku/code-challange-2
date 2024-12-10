@@ -8,7 +8,7 @@ const listCount = document.getElementById("listCount"); //counter section
 
 //starting function
 document.addEventListener("DOMContentLoaded", function() {
-    addButton.addEventListener("click", addItem);//add buton
+    addButton.addEventListener("click", addItem);
    
     //if enter is pressed in the input part, add item 
     listInput.addEventListener("keydown", function (event) {
@@ -20,13 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // when delete is pressed, delete all items
     deleteButton.addEventListener("click", deleteAllItems)
     
-    displayItems() // to show all items on the list
-  
+    displayItems() 
 });
 
 
-//creates a new task in the input box and if the new item is not
-//equal to an empty string then pushes it
+// Adds a new item to the shopping list
 function addItem () {
 const newItem = listInput.value;
     if (newItem!== "") {
