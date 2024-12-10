@@ -6,3 +6,13 @@ const addButton = document.querySelector(".btn"); // add button
 const deleteButton = document.getElementById("deleteButton"); //delete button
 const todoCount = document.getElementById("todoCount"); //counter section
 
+//listener for the add button
+document.addEventListener("DOMContentLoaded", function() {
+    addButton.addEventListener("click", addItem);
+})
+
+
+//rem
+function addItem () {
+
+}
