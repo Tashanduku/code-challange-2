@@ -60,7 +60,31 @@ function displayItems() {
       toggleCompletion(index);
     });
 
-   
+    const itemText = document.createElement("span");
+    itemText.textContent = item.text;
+    if (item.completed) {
+      itemText.style.textDecoration = "line-through"; // Strike-through for completed items
+    }
+  
+      // Add a delete button for individual items
+      const deleteItemButton = document.createElement("button");
+      deleteItemButton.textContent = "X";
+      deleteItemButton.classList.add("delete-item");
+      deleteItemButton.addEventListener("click", function () {
+        deleteItem(index);
+      });
+  
+    listItem.appendChild(checkbox); // Add checkbox to the list item
+    listItem.appendChild(itemText); // Add the item text
+    listItem.appendChild(deleteItemButton); // Add the delete button
+    shopList.appendChild(listItem);
+  });
+  
+    // Update item count
+    listCount.textContent = shoppingList.length;
+  }
+  
+  
 
 
 
