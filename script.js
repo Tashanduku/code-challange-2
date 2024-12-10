@@ -83,11 +83,29 @@ function displayItems() {
     // Update item count
     listCount.textContent = shoppingList.length;
   }
+
+  // Toggles the completion status of an item
+  function toggleCompletion(index) {
+    shoppingList[index].completed = !shoppingList[index].completed; // Toggle completion status
+    saveToLocalStorage();
+    displayItems();
+  }
+
+
+  // Deletes a specific item by index
+  function deleteItem(index) {
+    shoppingList.splice(index, 1); // Remove the item from the list
+    saveToLocalStorage();
+    displayItems();
+  }
   
+  // Deletes all items from the shopping list
+  function deleteAllItems() {
+    shoppingList = [];
+    saveToLocalStorage();
+    displayItems();
+  }
   
-
-
-
 //saves the list to local storage
 function saveToLocalStorage() {
     localStorage.setItem("shoppinglist", JSON.stringify(shoppingList));

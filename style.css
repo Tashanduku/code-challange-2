@@ -130,6 +130,43 @@ h2 {
     cursor: pointer;
   }
   
+  /* the list styling */
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    color:  rgba(49, 40, 40, 0.9); 
+    overflow-x: hidden;
+  }
+  
+  /* Style for each item in the to-do list */
+#shop-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+    color:  rgba(110, 45, 45, 0.9); 
+    padding: 1rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem; 
+    background-color:  rgba(230, 210, 230, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500
+  }
+
+  #shop-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+  #shop-list li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+
   .footer {
     display: flex;
     gap: 1.8rem;
