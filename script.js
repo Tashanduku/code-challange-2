@@ -1,10 +1,10 @@
 // get shopping list from a local storage
 let shoppingList = JSON.parse(localStorage.getItem("shoppinglist")) || [];
 const listInput = document.getElementById("listInput"); //fetching the input field
-const shopList = document.getElementById("shop-List"); //list section
+const shopList = document.getElementById("shop-list"); //list section
 const addButton = document.querySelector(".btn"); // add button
 const deleteButton = document.getElementById("deleteButton"); //delete button
-const todoCount = document.getElementById("todoCount"); //counter section
+const listCount = document.getElementById("listCount"); //counter section
 
 //starting function
 document.addEventListener("DOMContentLoaded", function() {
@@ -35,13 +35,35 @@ const newItem = listInput.value;
         });
         saveToLocalStorage();
         listInput.value=""; //clears the list once it is entered
-        displayTasks()
+        displayItems()
     }
 }
 
 function deleteAllItems () {
 
 }
+
+
+//displaying tasks once entered
+
+function displayItems() {
+    shopList.innerHTML = ""; // Clear current list display
+    shoppingList.forEach((item, index) => {
+      const listItem = document.createElement("li");
+      
+
+ // Create a checkbox for marking the item as completed
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = item.completed; // Reflect the item's completion status
+    checkbox.addEventListener("change", function () {
+      toggleCompletion(index);
+    });
+
+   
+
+
+
 //saves the list to local storage
 function saveToLocalStorage() {
     localStorage.setItem("shoppinglist", JSON.stringify(shoppingList));
