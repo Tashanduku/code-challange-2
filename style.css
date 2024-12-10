@@ -44,11 +44,51 @@ h2 {
 
   .input-field {
     width: 100%;
-    background-color: rgb(202, 156, 191);
-    border: 0.06rem solid rgb(202, 156, 191);
+    background-color:  rgba(230, 210, 230, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 0.5rem;
     padding: 1.25rem;
     font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(15, 15, 15, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .input-field:focus {
+    outline: none;
+    border: 0.06rem solid rgb(159, 118, 174);
+    box-shadow: 0 0 5px rgba(159, 118, 174, 0.5);
   }
 
+  /*styling the add button*/
+  .btn {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(
+      180deg,
+      rgba(202, 156, 191, 0.6),
+      rgba(159, 118, 174, 1)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(15, 15, 15, 0.1);
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(159, 118, 174, 1),
+      rgba(202, 156, 191, 0.6)
+    );
+    box-shadow: 0 4px 8px rgba(15, 15, 15, 0.2);
+  }
   
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(159, 118, 174, 0.7);
+  }
