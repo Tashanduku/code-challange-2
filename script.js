@@ -1,5 +1,5 @@
 // get shopping list from a local storage
-let todo = JSON.parse(localStorage.getItem("shoppinglist")) || [];
+let shoppingList = JSON.parse(localStorage.getItem("shoppinglist")) || [];
 const listInput = document.getElementById("listInput"); //fetching the input field
 const shopList = document.getElementById("shop-List"); //list section
 const addButton = document.querySelector(".btn"); // add button
@@ -8,7 +8,7 @@ const todoCount = document.getElementById("todoCount"); //counter section
 
 //starting function
 document.addEventListener("DOMContentLoaded", function() {
-    addButton.addEventListener("click", addItem());//add buton
+    addButton.addEventListener("click", addItem);//add buton
    
     //if enter is pressed in the input part, add item 
     listInput.addEventListener("keydown", function (event) {
@@ -25,11 +25,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//rem
+//creates a new task in the input box and if the new item is not
+//equal to an empty string then pushes it
 function addItem () {
-
+const newItem = listInput.value;
+    if (newItem!== "") {
+        shoppingList.push({
+           text: newItem, disabled: false, //if a new item is added and not disabled 
+        });
+        saveToLocalStorage();
+        listInput.value=""; //clears the list once it is entered
+        displayTasks()
+    }
 }
 
 function deleteAllItems () {
 
 }
+//saves the list to local storage
+function saveToLocalStorage() {
+    localStorage.setItem("shoppinglist", JSON.stringify(shoppingList));
+  }
