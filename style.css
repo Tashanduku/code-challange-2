@@ -167,6 +167,32 @@ h2 {
     border-bottom: none; /* Remove border for the last item */
   }
 
+/* completed items in from js */
+#shop-list .completed {
+    text-decoration: line-through;
+  }
+
+  /* Checkbox customization */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+    border: 2px solid rgba(159, 118, 174, 0.7); 
+    background-color: white; /* Background color when unchecked */
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  /* Style for 'checked' checkbox */
+input[type="checkbox"]:checked {
+    background-color: rgba(159, 118, 174, 1); /* Background color when checked */
+    border-color: rgba(159, 118, 174, 1); /* Border color when checked */
+  }
+  
+
   .footer {
     display: flex;
     gap: 1.8rem;
