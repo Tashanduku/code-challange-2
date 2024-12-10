@@ -1,8 +1,8 @@
 :root {
     --gradient: linear-gradient(
       180deg,
-      #e2b8abba 0%,  
-      #92532f 100%
+      #d8aa9cba 0%,  
+      #834826 100%
     );
 }
 body {
@@ -35,3 +35,20 @@ h2 {
     color: rgb(43, 41, 40);
     text-align: center;
   }
+
+  /*input area*/
+  .input {
+    position: relative;
+    display: flex;
+  }
+
+  .input-field {
+    width: 100%;
+    background-color: rgb(202, 156, 191);
+    border: 0.06rem solid rgb(202, 156, 191);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+
+  
