@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping List</title>
+    <title>shoppingList</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <section class="shopping-list">
-        <h2>Shopping List</h2> <!--input place-->
+        <h2>Shopping-List</h2> <!--input place-->
         <div class="input">
           <input type="text" class="input-field" id="listInput" placeholder="Add a new Item"/>
           <button class="btn"> Add </button>
@@ -21,7 +22,7 @@
         <div>
             <hr class="counter"/>
             <div class="counter-container">
-                <p><span>0</span>Items total</p>
+                <p><span id="listCount">0</span> items total</p>
                 <button id="deleteButton">Delete all</button>
             </div>
         </div>
