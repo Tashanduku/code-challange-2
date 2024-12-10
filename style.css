@@ -1,0 +1,17 @@
+:root {
+    --gradient: linear-gradient(
+      180deg,
+      #e2b8abba 0%,  
+      #92532f 100%
+    );
+}
+body {
+    margin: 0%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--gradient)
+}
+
