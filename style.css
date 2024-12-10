@@ -133,10 +133,11 @@ h2 {
   /* the list styling */
   ul {
     padding: 0;
-    margin: 0;
-    overflow-y: hidden;
+    margin: 3;
+    overflow-y: scroll;
     color:  rgba(49, 40, 40, 0.9); 
     overflow-x: hidden;
+    padding-right: 1rem;
   }
   
   /* Style for each item in the to-do list */
@@ -190,6 +191,22 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
     background-color: rgba(159, 118, 174, 1); /* Background color when checked */
     border-color: rgba(159, 118, 174, 1); /* Border color when checked */
+  }
+
+  /* Styling for the delete button */
+.delete-item {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-item:hover {
+    background-color: #ff4d4d;
   }
   
 
